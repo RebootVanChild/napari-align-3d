@@ -14,4 +14,4 @@ contributions:
       filename_patterns: ['*.npy']
   widgets:
     - command: napari-align-3d.make_magic_widget
-      display_name: Example Magic Widget
+      display_name: Landmark-based Registration
