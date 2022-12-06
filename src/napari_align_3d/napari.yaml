@@ -5,24 +5,13 @@ contributions:
     - id: napari-align-3d.get_reader
       python_name: napari_align_3d._reader:napari_get_reader
       title: Open data with Landmark-based Registration
-    - id: napari-align-3d.make_qwidget
-      python_name: napari_align_3d._widget:ExampleQWidget
-      title: Make example QWidget
     - id: napari-align-3d.make_magic_widget
       python_name: napari_align_3d._widget:example_magic_widget
       title: Make example magic widget
-    - id: napari-align-3d.make_func_widget
-      python_name: napari_align_3d._widget:example_function_widget
-      title: Make example function widget
   readers:
     - command: napari-align-3d.get_reader
       accepts_directories: false
       filename_patterns: ['*.npy']
   widgets:
-    - command: napari-align-3d.make_qwidget
-      display_name: Example QWidget
     - command: napari-align-3d.make_magic_widget
       display_name: Example Magic Widget
-    - command: napari-align-3d.make_func_widget
-      autogenerate: true
-      display_name: Example Function Widget
