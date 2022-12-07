@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Sequence
 
 import numpy as np
-from aicsimageio import AICSImage
+from aicsimageio import AICSImage, readers
 from magicgui import magic_factory
 from napari import Viewer
 
@@ -164,8 +164,8 @@ def example_magic_widget(
     target_img_path = str(target_img_file[0])
     landmarks_path = str(landmarks_file[0])
     # load images and landmarks
-    source_img = AICSImage(source_img_path)
-    target_img = AICSImage(target_img_path)
+    source_img = AICSImage(source_img_path, reader=readers.BioformatsReader)
+    target_img = AICSImage(target_img_path, reader=readers.BioformatsReader)
     landmarks = np.loadtxt(
         landmarks_path,
         delimiter=",",
