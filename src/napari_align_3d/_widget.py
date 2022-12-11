@@ -66,12 +66,7 @@ def GetRigidMatrixFromLandmarks(
     Q = target_points_landmarks - centroid_target
     M = np.dot(P.T, Q)
     U, W, V = np.linalg.svd(M)
-    print(U)
-    print(W)
-    print(V)
     R = np.dot(V.T, U.T)
-    print(R)
-    print(-np.dot(R, centroid_source.T))
     matrix = np.append(
         np.append(
             R,
